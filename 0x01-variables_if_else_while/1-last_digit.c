@@ -20,7 +20,6 @@ int main(void)
 	/* your code goes there */
 
 	nlast = n % 10;
-		printf("The last digit of the number n is %d\n", nlast);
 	if (nlast > 5)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, nlast);
