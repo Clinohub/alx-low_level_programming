@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- * Betty Style In C
- * main - prints:with proper grammar, 
+ * main - prints:with proper grammar,
  * but the outcome is a piece of art,
  * Return:0 if well terminated, else non 0
+ * Betty Style in C
  */
 
 int main(void)
