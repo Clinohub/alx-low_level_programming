@@ -1,17 +1,20 @@
 #include <stdio.h>
 /**
  *  main - Entry point
- *  Return: o for success
+ *  Return: 0 for success
  */
 
 int main(void)
 {
-	char c;
+	char aLPHA;
 
-	for (c='a'; c <= 'Z,; c++)
-		putchar (c);
-	for (c='A' ; c <= 'Z'; c++)
-		putchar (c);
+	for (aLPHA = 'a'; aLPHA <= 'Z'; aLPHA++)
+		putchar (aLPHA);
+
+	for (aLPHA = 'A' ; aLPHA <= 'Z'; aLPHA++)
+		putchar (aLPHA);
+
 	putchar('\n');
-	return (0)
+
+	return (0);
 }
