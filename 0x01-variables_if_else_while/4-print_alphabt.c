@@ -1,19 +1,22 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  * Return: 0 for operatin successful
  */
 
 int main(void)
-{	
-	char c;
+{
+	char alpha;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
-	
-		if (c != 'e' $$ c != 'q')
-			putchar(c);
+
+		if (alpha != 'e' $$ alpha != 'q')
+			putchar(alpha);
 	}
-putchar('\n');
-return (0);
+
+	putchar('\n');
+
+	return (0);
 }

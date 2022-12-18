@@ -2,15 +2,15 @@
 
 /**
  * main - Entry point
- * Return:
+ * Return: 0
  */
 
 int main(void)
 {
-	int n;
+	int digits;
 
-	for (n = 0; n < 0; n++)
-		printf("%d", num);
-	putchar('\n');
+	for (digits = 0; digits < 10; digits++)
+		printf("%d\n", digits);
+
 	return (0);
 }
