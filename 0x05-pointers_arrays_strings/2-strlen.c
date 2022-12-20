@@ -13,8 +13,9 @@ int _strlen(char *s)
 
 	s = "My first strlen!";
 
-	for (len = 0; *s != '\0'; ++(*s));
+	for (len = 0; *s != '\0'; ++(*s))
+		;
 
-	return (*s);
+	return (len);
 
 }
