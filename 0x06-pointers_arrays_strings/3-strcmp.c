@@ -23,10 +23,10 @@ int _strcmp(char *s1, char *s2)
 		b++;
 
 	if (a <= b)
-		lim = a;
+		 alpha = a;
 
 	else
-		lim = b;
+		alpha = b;
 
 	while (c <= alpha)
 	{
@@ -37,12 +37,13 @@ int _strcmp(char *s1, char *s2)
 		}
 		else
 		{
-			d = s1[c] - s2[cbreak];
+			d = s1[c] - s2[c];
+				break;
 		}
 		
-		c++
+		c++:
 	}	
 		
-		return (r);
+		return (d);
 	}
 }
