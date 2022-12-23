@@ -3,8 +3,8 @@
 /**
  * _strcmp - compares two strings
  * @s1: string one
- * s2: string two
- * Return :int value
+ * @s2: string two
+ * Return: int value
  */
 
 int _strcmp(char *s1, char *s2)
@@ -14,15 +14,17 @@ int _strcmp(char *s1, char *s2)
 	int c = 0;
 	int d = 0;
 	int alpha;
-	
+
 	while (s1[a])
 		a++;
-	
+
 	while (s2[b])
 		b++;
 
 	if (a <= b)
+	{
 		 alpha = a;
+	}
 
 	else
 		alpha = b;
@@ -39,10 +41,9 @@ int _strcmp(char *s1, char *s2)
 			d = s1[c] - s2[c];
 			break;
 		}
-		
-		c++:
-	}	
-		
+
+		c++;
 	}
+
 return (d);
 }
