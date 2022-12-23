@@ -2,24 +2,24 @@
 
 /**
  * *string_toupper - changes all lowercase letters of a string to uppercase
- *  : param
- * Return: a
+ * @ptr: param
+ * Return: ptr
 */
 
-char *string_toupper(char *)
+char *string_toupper(char *ptr)
 {
 
 		int a = 0;
 
-		while (a)
+		while (ptr[a])
 
 		{
 
-			if (a >= 97 && a <= 122)
+			if (ptr[a] >= 'a' && ptr[a] <= 'z')
 
 			{
 
-				a -= 32;
+				ptr[a] -= 32;
 
 			}
 
@@ -27,5 +27,5 @@ char *string_toupper(char *)
 
 		}
 
-		return (a);
+		return (ptr);
 }
