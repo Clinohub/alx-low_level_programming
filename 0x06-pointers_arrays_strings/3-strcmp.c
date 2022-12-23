@@ -23,7 +23,7 @@ int _strcmp(char *s1, char *s2)
 
 	if (a <= b)
 	{
-		 alpha = a;
+		alpha = a;
 	}
 
 	else
