@@ -1,1 +1,1 @@
-Double pointers and arrays and strings
+Double pointers, arrays and strings
