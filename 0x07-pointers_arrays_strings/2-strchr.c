@@ -24,5 +24,5 @@ int a = 0, b;
 		}
 
 	}
-	return (NULL);
+	return ('\0');
 }
