@@ -2,33 +2,43 @@
 
 /**
  * times_table - prints the 9 times table
+ * Return: void
  */
 
 void times_table(void)
+
 {
-	int num;
-	int mult;
-	int prod;
+	int i, j, k, a, b;
 
-	prod = num * mult
-
-	for (num = 0; num <= 9; num++)
+	for (i = 0; i <= 9; i++)
 	{
-		_putchar('0');
-
-		for (mult = 1; mult <= 9; mult++)
+		for (j = 0; j <= 9; j++)
 		{
-			_putchar(',');
-			_putchar(' ');
+			k = i * j;
 
-			if (prod <= 9)
+			if (k > 9)
+			{
+				a = k % 10;
+				b = (k - a) / 10;
+
+				_putchar(',');
 				_putchar(' ');
+				_putchar(b + '0');
+				_putchar(a + '0');
+			}
 			else
-				_putchar('0' + (prod / 10));
+			{
+				if (j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
 
-						_putchar('0' + (prod % 10));
+				_putchar(k + '0');
+			}
 		}
+
 		_putchar('\n');
 	}
 }
-
