@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints Buzz each numbers
@@ -7,9 +8,9 @@
 
 int main(void)
 {
-	int n = 1;
-	printf("%d", n);
-	for (n = 2; n <= 100; n++)
+	int n;
+
+	for (n = 1; n <= 100; n++)
 	{
 		if ((n % 3 == 0) && (n % 5 == 0))
 		{
@@ -19,7 +20,7 @@ int main(void)
 		{
 			printf("Fizz");
 		}
-		else if ( n % 5 == 0)
+		else if (n % 5 == 0)
 		{
 			printf("Buzz");
 		}
@@ -27,8 +28,12 @@ int main(void)
 		{
 			printf("%d", n);
 		}
+		if (x != 100)
+		{
+			printf(" ");
+		}
 	}
+
 	printf("\n");
 	return (0);
 }
-
