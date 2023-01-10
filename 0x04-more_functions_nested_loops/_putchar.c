@@ -6,6 +6,7 @@
  * @c: the character to print
  * Return: 1 if successfully executed
  */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
