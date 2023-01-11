@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdlib.h>
 
 /**
@@ -10,42 +10,36 @@
 
 int **alloc_grid(int width, int height)
 {
-	int w, x, y, z;
-	int **ptr;
+	int **twoD;
+	int hgt_index, wid_index;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	ptr = malloc(sizeof(int *) * height);
+	twoD = malloc(sizeof(int *) * height);
 
-	if (a == NULL)
-	{
-		free(ptr);
+	if (twoD == NULL)
 		return (NULL);
-	}
 
-	for (w = 0; w < height; w++)
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
 	{
-		ptr[w] = malloc(sizeof(int) * width);
+		twoD[hgt_index] = malloc(sizeof(int) * width);
 
-		if (ptr[w] == NULL)
+		if (twoD[hgt_index] == NULL)
 		{
-			x = w;
-			while (x >= 0)
-			{
-				free(ptr[x]);
-				w--;
-			}
+			for (; hgt_index >= 0; hgt_index--)
+				free(twoD[hgt_index]);
 
-			free(ptr);
+			free(twoD);
 			return (NULL);
 		}
 	}
 
-	for (y = 0; y < height; y++)
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
 	{
-		for (z = 0; z < width; z++)
-			ptr[y][z] = 0;
+		for (wid_index = 0; wid_index < width; wid_index++)
+			twoD[hgt_index][wid_index] = 0;
 	}
-	return (ptr);
+
+	return (twoD);
 }
