@@ -4,9 +4,9 @@
 
 /**
   * str_concat - concatenates two strings
-  * @s1: allocated space in memory
-  * @s2: another allocated space in memory
-  * Return: pointer to the allocated memory or NULL on failure
+  * @s1: first string
+  * @s2: second string
+  * Return: the 2 concatenated srings otherwise NULL on failure
   */
 
 char *str_concat(char *s1, char *s2)
@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 	if (s == NULL)
 		return (NULL);
 
-	while (c < 1)
+	while (c < d)
 	{
 		if (c <= a)
 			s[c] = s1[c];
