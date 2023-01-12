@@ -1,45 +1,50 @@
-#include "holberton.h"
-#include <stdlib.h>
+#include "main.h"
 
 /**
   * alloc_grid - returns a pointer to a 2 dimensional array of integers
-  * @width: integers
-  * @height: integers
-  * Return: 0 0therwise NULL
+  * @width: width of grid
+  * @height: height of grid
+  * Return: size of grid otherwise NULL
   */
 
 int **alloc_grid(int width, int height)
 {
-	int **twoD;
-	int hgt_index, wid_index;
+	int w, x, y, z;
+	int **ptr;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	twoD = malloc(sizeof(int *) * height);
+	ptr = (int *)malloc(sizeof(int *) * height);
 
-	if (twoD == NULL)
-		return (NULL);
-
-	for (hgt_index = 0; hgt_index < height; hgt_index++)
+	if (w == NULL)
 	{
-		twoD[hgt_index] = malloc(sizeof(int) * width);
+		free(ptr);
+		return (NULL);
+	}
 
-		if (twoD[hgt_index] == NULL)
+	for (w = 0; w < height; w++)
+	{
+		ptr[w] = malloc(sizeof(int) * width);
+
+		if (ptr[w] == NULL)
 		{
-			for (; hgt_index >= 0; hgt_index--)
-				free(twoD[hgt_index]);
+			x = w;
+			while (x >= 0)
+			{
+				free(ptr[x]);
+				w--;
+			}
 
-			free(twoD);
+			free(ptr);
 			return (NULL);
 		}
 	}
 
-	for (hgt_index = 0; hgt_index < height; hgt_index++)
+	for (y = 0; y < height; y++)
 	{
-		for (wid_index = 0; wid_index < width; wid_index++)
-			twoD[hgt_index][wid_index] = 0;
+		for (z = 0; z < width; z++)
+			ptr[y][z] = 0;
 	}
-
-	return (twoD);
+	return (ptr);
 }
