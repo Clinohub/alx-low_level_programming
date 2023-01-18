@@ -1,7 +1,7 @@
-#ifndef __HEADER__
-#define __HEADER__
+#ifndef _HEADER_
+#define _HEADER_
 
 #define SIZE 1024
 /*defines SIZE as 1024*/
 
-#endif /* #ifndef __HEADER__
+#endif /* #ifndef _HEADER_
