@@ -4,4 +4,4 @@
 #define SIZE 1024
 /*defines SIZE as 1024*/
 
-#endif /* #ifndef _HEADER_
+#endif /*#ifndef _HEADER_*/
